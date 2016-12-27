@@ -50,4 +50,17 @@ public class Order implements IOrder {
     public String getComment() {
         return comment;
     }
+
+    @Override
+    public String toString() {
+        return "Order{" +
+                "orderId='" + orderId + '\'' +
+                ", commodityId='" + commodityId + '\'' +
+                ", volume=" + volume +
+                ", filledVolume=" + filledVolume +
+                ", price=" + price +
+                ", side=" + side +
+                ", comment='" + comment + '\'' +
+                '}';
+    }
 }

@@ -5,7 +5,7 @@ import com.bdravid.order.IOrder;
 /**
  * Created by Bdravid on 26/12/2016.
  */
-public class NewOrderRequest {
+public class NewOrderRequest implements IRequestBody{
     private final String commodityId;
     private final long volume;
     private final double price;
@@ -32,5 +32,15 @@ public class NewOrderRequest {
 
     public IOrder.OrderSide getSide() {
         return side;
+    }
+
+    @Override
+    public String toString() {
+        return "NewOrderRequest{" +
+                "commodityId='" + commodityId + '\'' +
+                ", volume=" + volume +
+                ", price=" + price +
+                ", side=" + side +
+                '}';
     }
 }

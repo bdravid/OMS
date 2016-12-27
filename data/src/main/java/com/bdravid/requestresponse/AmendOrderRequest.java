@@ -3,10 +3,10 @@ package com.bdravid.requestresponse;
 /**
  * Created by Bdravid on 26/12/2016.
  */
-public class AmendOrderRequest {
+public class AmendOrderRequest implements IRequestBody{
     private String orderId;
-    private long newVolume;
-    private long newPrice;
+    private Long newVolume;
+    private Double newPrice;
     private String newComment;
 
     public String getOrderId() {
@@ -17,19 +17,19 @@ public class AmendOrderRequest {
         this.orderId = orderId;
     }
 
-    public long getNewVolume() {
+    public Long getNewVolume() {
         return newVolume;
     }
 
-    public void setNewVolume(long newVolume) {
+    public void setNewVolume(Long newVolume) {
         this.newVolume = newVolume;
     }
 
-    public long getNewPrice() {
+    public Double getNewPrice() {
         return newPrice;
     }
 
-    public void setNewPrice(long newPrice) {
+    public void setNewPrice(Double newPrice) {
         this.newPrice = newPrice;
     }
 
@@ -39,5 +39,15 @@ public class AmendOrderRequest {
 
     public void setNewComment(String newComment) {
         this.newComment = newComment;
+    }
+
+    @Override
+    public String toString() {
+        return "AmendOrderRequest{" +
+                "orderId='" + orderId + '\'' +
+                ", newVolume=" + newVolume +
+                ", newPrice=" + newPrice +
+                ", newComment='" + newComment + '\'' +
+                '}';
     }
 }

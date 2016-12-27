@@ -36,4 +36,13 @@ public class ExchangeOrderState {
     public OrderState getOrderState() {
         return orderState;
     }
+
+    @Override
+    public String toString() {
+        return "ExchangeOrderState{" +
+                "order=" + order +
+                ", exchangeOrderList=" + exchangeOrderList +
+                ", orderState=" + orderState +
+                '}';
+    }
 }
